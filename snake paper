@@ -1,0 +1,45 @@
+package sample.next;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class snakepapers {
+public static void main(String[] args) {
+	Random random = new Random();
+	int nextInt = random.nextInt(0,3);
+	System.out.println(nextInt);
+	String [] move= {"S","W","G"};
+	String rand=move[nextInt];
+	System.out.println("random order :"+rand);
+	
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("enter you choice in S ,W,G");
+	String next = scanner.next();
+	System.out.println(next);
+	if(rand.equals(next))
+	{
+		System.out.println("match is Draw");
+	}
+	else if(rand.equals("S") && next.equals("W"))
+	{
+		System.out.println("USer is Winner");
+	}
+	else if(rand.equals("W") && next.equals("S"))
+	{
+		System.out.println("CPU is Winner");
+	}
+	else if (rand.equals("w") && next.equals("G")) {
+		System.out.println("CPU is Winner");
+	}
+	else if (rand.equals("G") && next.equals("W")) {
+		System.out.println("User is Winner");
+	}
+	else if (rand.equals("G") && next.equals("S")) {
+		System.out.println("User Is Winner.");
+	}
+	else if (rand.equals("S") && next.equals("G")) {
+		System.out.println("User Is Winner.");
+	}
+	
+}
+}
